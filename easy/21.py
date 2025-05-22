@@ -4,7 +4,7 @@ class ListNode:
         self.next = next
 
 class Solution:
-    def mergeTwoLists(self, list1: Optional[ListNode], list2: Optional[ListNode]) -> Optional[ListNode]:
+    def mergeTwoLists(self, list1: [ListNode], list2: [ListNode]):
         dummy=ListNode()
         tail=dummy
 
