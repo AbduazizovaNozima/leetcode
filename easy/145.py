@@ -4,15 +4,15 @@ class TreeNode:
         self.left = left
         self.right = right
 class Solution:
-    def inorderTraversal(self, root):
+    def postorderTraversal(self, root):
         result = []
-        def inorder(node):
+        def postorder(node):
             if node is None:
                 return
-            inorder(node.left)
-            inorder(node.right)
+            postorder(node.left)
+            postorder(node.right)
             result.append(node.val)
-        inorder(root)
+        postorder(root)
         return result
 
 
@@ -27,4 +27,4 @@ root.right.right = TreeNode(8)
 root.right.right.left = TreeNode(9)
 
 s = Solution()
-print(s.inorderTraversal(root))
+print(s.postorderTraversal(root))
