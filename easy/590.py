@@ -5,7 +5,7 @@ class TreeNode:
 
 
 class Solution:
-    def preorderTraversal(self, root):
+    def postorderTraversal(self, root):
         result = []
 
         def postorder(node):
@@ -18,15 +18,12 @@ class Solution:
         postorder(root)
         return result
 
-root = TreeNode(1)
-root.left = TreeNode(2)
-root.right = TreeNode(3)
-root.left.left = TreeNode(4)
-root.left.right = TreeNode(5)
-root.left.right.left = TreeNode(6)
-root.left.right.right = TreeNode(7)
-root.right.right = TreeNode(8)
-root.right.right.left = TreeNode(9)
+
+root = TreeNode(1, [
+    TreeNode(3, [TreeNode(5), TreeNode(6)]),
+    TreeNode(2),
+    TreeNode(4)
+])
 
 s = Solution()
-print(s.preorderTraversal(root))
+print(s.postorderTraversal(root))
