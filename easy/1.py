@@ -8,3 +8,4 @@ class Solution:
                     result.append(j)
                     return result
         return []
+
